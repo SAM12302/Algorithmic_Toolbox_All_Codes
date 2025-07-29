@@ -14,12 +14,12 @@ def change(money):
             money -= 1
             count_1 += 1
 
-    parts = []
+    """    parts = []
     parts.extend(["10"] * count_10)
     parts.extend(["5"] * count_5)
-    parts.extend(["1"] * count_1)
+    parts.extend(["1"] * count_1)"""
 
-    return " + ".join(parts)
+    return ((count_1) + (count_10) + (count_5))
 
 
 if __name__ == '__main__':

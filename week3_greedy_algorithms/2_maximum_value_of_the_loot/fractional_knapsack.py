@@ -24,19 +24,17 @@ def optimal_value(capacity, weights, values):
             value = value + goodness * remaining_capacity
             break          
 
-    print(goodness_list)
-
     return value
 
 
 if __name__ == "__main__":
-    #data = list(map(int, stdin.read().split()))
-    """    n, capacity = data[0:2]
+    data = list(map(int, stdin.read().split()))
+    n, capacity = data[0:2]
     values = data[2:(2 * n + 2):2]
-    weights = data[3:(2 * n + 2):2]"""
-    n = 3  # No more than 3 items
+    weights = data[3:(2 * n + 2):2]
+    """    n = 3  # No more than 3 items
     capacity = 50  # Example knapsack capacity
     values = [60, 100, 120]  # Example item values
-    weights = [10, 20, 30]  # Example item weights
+    weights = [10, 20, 30]  # Example item weights"""
     opt_value = optimal_value(capacity, weights, values)
     print("{:.10f}".format(opt_value))
