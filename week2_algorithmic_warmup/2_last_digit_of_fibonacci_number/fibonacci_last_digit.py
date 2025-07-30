@@ -1,14 +1,18 @@
+result = []
 def fibonacci_last_digit(n):
-    if n <= 1:
+    if n < 1:
         return n
-
-    previous = 0
-    current  = 1
-
-    for _ in range(n - 1):
-        previous, current = current, previous + current
-
-    return current % 10
+    elif n <= 1:
+        return n
+    else:
+        result.append(0)
+        result.append(1)
+        count = result.index(1)
+        while count < n:
+            next_fib = result[count] + result[count - 1]
+            count = count + 1
+            result.append(next_fib)
+    return next_fib % 10
 
 
 if __name__ == '__main__':
