@@ -1,13 +1,10 @@
 def fibonacci_last_digit(n):
-    if n <= 1:
-        return n
-
     previous = 0
-    current  = 1
-
-    for _ in range(n - 1):
-        previous, current = current, previous + current
-
+    current = 1
+    for i in range(2, n + 1):
+        temp = current
+        current = current + previous
+        previous = temp
     return current % 10
 
 
