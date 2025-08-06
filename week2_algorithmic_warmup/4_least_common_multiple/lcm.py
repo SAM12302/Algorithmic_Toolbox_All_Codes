@@ -1,9 +1,19 @@
-def lcm(a, b):
+"""def lcm(a, b):
     for l in range(1, a * b + 1):
         if l % a == 0 and l % b == 0:
             return l
 
-    assert False
+    assert False"""
+def gcd(a,b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+
+def lcm(a,b):
+    result = int((a * b)/gcd(a,b))
+    return result
 
 
 if __name__ == '__main__':
