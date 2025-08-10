@@ -1,5 +1,18 @@
 def binary_search(keys, query):
     # write your code here
+    high = len(keys) - 1
+    low = 0
+    mid = int(low + (high - low)/2)
+    if low > high:
+        return print()
+
+    if query == keys[mid]:
+        return mid
+    elif query < keys[mid]:
+        return binary_search(keys[:(mid - 1)], query)
+    elif query > keys[mid]:
+        return binary_search(keys[(mid + 1):], query)
+
 
 
 if __name__ == '__main__':
